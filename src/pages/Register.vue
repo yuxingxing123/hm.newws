@@ -2,10 +2,8 @@
   <div class="register">
     <hm-header>注册</hm-header>
     <hm-logo></hm-logo>
-    <hm-input></hm-input>
-    <hm-input></hm-input>
-    <hm-input></hm-input>
-
+      
+    <van-button type="warning">警告按钮</van-button>
     <hm-button @click="register">注册</hm-button>
   </div>
 </template>

@@ -25,7 +25,7 @@
 export default {
   methods: {
     login() {
-      this.axios({
+      this.$axios({
         method: 'post',
         url: '/login',
         data: {
@@ -33,12 +33,14 @@ export default {
           password: this.password
         }
       }).then(res => {
-        console.log(res)
+        console.log(res.data)
         if (res.data.statusCode === 200) {
-          alert('登录成功')
+          // alert('登录成功')
+          this.$toast('登录成功了')
           this.$router.push('/user')
         } else {
-          alert('用户名或者密码错误')
+          // alert('用户名或者密码错误')
+          this.$toast('用户名或密码错误')
         }
       })
     }

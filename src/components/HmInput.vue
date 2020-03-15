@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script> 
+<script>
 export default {
   // 用于接收父组件传递过来的数据
   props: {
