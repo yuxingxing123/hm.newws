@@ -41,16 +41,19 @@ export default {
       // e.target能获取到触发事件的元素
       let value = e.target.value
       this.$emit('input', value)
-
+      this.validate(value)
+    },
+    validate(value) {
       //  添加表单校验
       if (this.rule) {
         //  判断value值是否符合传入
         if (this.rule.test(value)) {
           this.status = 'success'
+          return true
         } else {
           this.status = 'error'
+          return false
         }
-        // console.log(this.status)
       }
     }
   }
